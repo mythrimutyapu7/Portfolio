@@ -1,0 +1,90 @@
+.circle {
+  position: relative;
+  width: 800px;   /* wider → planetary feel */
+  height: 520px;
+  margin: 0 auto;
+}
+
+/* ================= BASE BUBBLE ================= */
+
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    #60a5fa,
+    #1e3a8a
+  );
+
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  /* 🌍 ELLIPTICAL ORBIT */
+  transform:
+    rotate(calc(360deg / var(--count, 1) * var(--i, 0)))
+    translateX(var(--radiusX, 0))
+    translateY(var(--radiusY, 0))
+    rotate(calc(-360deg / var(--count, 1) * var(--i, 0)))
+    scale(var(--scale, 1));
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+/* ================= CENTER ================= */
+
+.bubble:first-child {
+  --radiusX: 0;
+  --radiusY: 0;
+  z-index: 3;
+}
+
+/* ================= INNER ORBIT ================= */
+
+.inner {
+  --radiusX: 110px;   /* wide */
+  --radiusY: 10px;    /* VERY flat */
+}
+
+.outer {
+  --radiusX: 200px;   /* very wide */
+  --radiusY: 90px;    /* still flat */
+}
+
+
+/* ================= HOVER GLOW ================= */
+
+.bubble:hover {
+  box-shadow:
+    0 20px 50px rgba(96, 165, 250, 0.45),
+    0 0 25px rgba(96, 165, 250, 0.6);
+}
+.circle {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 300px;
+  margin: 0 auto;
+}

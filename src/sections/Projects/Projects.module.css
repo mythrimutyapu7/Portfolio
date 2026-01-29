@@ -1,0 +1,231 @@
+/* ================= PROJECTS SECTION ================= */
+
+/* ================= PROJECTS SECTION ================= */
+
+.projects {
+  position: relative;
+  padding: 140px 0;
+  background-color: #00040f !important;
+  overflow: hidden;
+}
+
+/* AURORA WAVES */
+.projects::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background:
+    radial-gradient(40% 60% at 20% 30%, rgba(59,130,246,0.35), transparent 60%),
+    radial-gradient(40% 60% at 80% 40%, rgba(92, 115, 246, 0.35), transparent 60%),
+    radial-gradient(30% 50% at 50% 80%, rgba(96,165,250,0.3), transparent 60%);
+  animation: auroraMove 22s ease-in-out infinite;
+  filter: blur(60px);
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: translate(-5%, -5%) scale(1);
+  }
+  50% {
+    transform: translate(5%, 5%) scale(1.15);
+  }
+  100% {
+    transform: translate(-5%, -5%) scale(1);
+  }
+}
+
+
+
+@keyframes projectsGlow {
+  0%   { transform: translate(-6%, -4%); }
+  50%  { transform: translate(6%, 4%); }
+  100% { transform: translate(-6%, -4%); }
+}
+
+
+@keyframes projectsGlow {
+  0% {
+    transform: translate(-6%, -4%);
+  }
+  50% {
+    transform: translate(6%, 4%);
+  }
+  100% {
+    transform: translate(-6%, -4%);
+  }
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h2 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.header h2 span {
+  color: #60a5fa;
+}
+
+.header p {
+  margin-top: 14px;
+  max-width: 680px;
+  margin-inline: auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  position: relative; /* 🔥 IMPORTANT */
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 20px;
+  padding: 28px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(96, 165, 250, 0.15);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #60a5fa;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* ================= TECH TAGS ================= */
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech span {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #cbd5f5;
+  background: rgba(96, 165, 250, 0.12);
+  border-radius: 999px;
+}
+
+/* ================= LINKS ================= */
+
+.links {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.links a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #60a5fa;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.links a:hover {
+  transform: translateY(-2px);
+}
+
+.outline {
+  padding: 8px 16px;
+  border: 1px solid #60a5fa;
+  border-radius: 999px;
+}
+.github {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  color: #94a3b8;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.github:hover {
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+.projects::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.05;
+  animation: projectsGrid 36s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes projectsGrid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 260px 260px;
+  }
+}
+.container {
+  position: relative;
+  z-index: 2;
+}

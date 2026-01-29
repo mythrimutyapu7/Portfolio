@@ -1,0 +1,90 @@
+/* ================= CONTACT BAR ================= */
+
+.contactBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+
+  /* SAME HEIGHT AS NAVBAR */
+  height: 88px;
+
+  /* SAME GLASS STYLE */
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(12px);
+
+  border-top: 1px solid rgba(31, 41, 55, 0.6);
+  overflow: hidden;
+}
+
+/* Animated background (same as navbar) */
+.contactBar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(59,130,246,0.18),
+    rgba(139,92,246,0.12),
+    rgba(59,130,246,0.18)
+  );
+  background-size: 200% 200%;
+  animation: contactBg 22s ease infinite;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+@keyframes contactBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= INNER CONTAINER ================= */
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+/* ================= LINKS ================= */
+
+.container a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #cbd5f5;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.container a:hover {
+  transform: translateY(-2px);
+  color: #60a5fa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .contactBar {
+    height: 72px;
+  }
+
+  .container {
+    padding: 0 24px;
+    gap: 20px;
+  }
+
+  .container a {
+    font-size: 0.95rem;
+  }
+}
