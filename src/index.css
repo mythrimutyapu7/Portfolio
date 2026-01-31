@@ -134,3 +134,12 @@ body {
     background-position: 0% 50%;
   }
 }
+.contactBar {
+  position: static;
+}
+/* ===== REMOVE EXTRA SPACE ON MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 5px;
+  }
+}
