@@ -88,3 +88,24 @@
     font-size: 0.95rem;
   }
 }
+/* ===== CONTACT BAR MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .contactBar {
+    position: static;   /* 🔥 stops overlapping content */
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .container {
+    flex-wrap: wrap;    /* 🔥 allows links to go to next line */
+    gap: 12px;
+    padding: 0 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .container a {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}

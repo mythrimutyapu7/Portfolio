@@ -112,3 +112,24 @@
     font-size: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .links a {
+    font-size: 0.9rem;
+  }
+}
