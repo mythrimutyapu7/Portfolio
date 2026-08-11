@@ -1,0 +1,131 @@
+.certifications {
+  position: relative;
+  padding: 120px 0;
+  background-color: #00040f;
+  overflow: hidden;
+}
+
+.certifications::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    40% 50% at 20% 70%,
+    rgba(139, 92, 246, 0.08),
+    transparent 60%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.header h2 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.header h2 span {
+  color: #60a5fa;
+}
+
+.header p {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  color: #94a3b8;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    inset 0 0 15px rgba(139, 92, 246, 0.05);
+}
+
+.badgeWrapper {
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  display: inline-flex;
+}
+
+.badgeIcon {
+  width: 24px;
+  height: 24px;
+  color: #60a5fa;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.issuer {
+  font-size: 0.95rem;
+  color: #60a5fa;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}

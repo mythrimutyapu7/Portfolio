@@ -13,27 +13,19 @@ const About = () => {
           <h2>About Me</h2>
 
           <p className={styles.intro}>
-            I’m <span>Mythri Mutyapu</span>, a Computer Science undergraduate with
-            strong interests in <strong>Full-Stack Development</strong>,
-            <strong> Machine Learning</strong>, and
-            <strong> problem-solving</strong>.
+            I’m <span>Mythri Mutyapu</span>, a Computer Science & Engineering undergraduate at <strong>VNR VJIET (Hyderabad)</strong> with a strong academic foundation and a passion for building next-generation applications.
           </p>
 
           <p>
-            I build clean, scalable web applications using the
-            <strong> MERN stack</strong> and enjoy working across both frontend
-            and backend systems.
+            I specialize in full-stack development and modern AI pipelines, combining frameworks like <strong>React.js</strong> and <strong>FastAPI</strong> with <strong>LangChain</strong> and LLMs to create smart, data-driven systems.
           </p>
 
           <p>
-            Alongside web development, I actively explore
-            <strong> Machine Learning concepts</strong> and enjoy applying
-            algorithms to real-world data.
+            I actively engage in the developer community and code contests. I am a <strong>Diamond Certified Smart Coder</strong> and love building solutions that solve real problems.
           </p>
 
           <p>
-            I’m driven by curiosity, continuous learning, and the challenge of
-            building meaningful software solutions.
+            I’m driven by curiosity, engineering discipline, and the thrill of converting complex requirements into elegant code.
           </p>
 
           <a href="#contact" className={styles.cta}>
@@ -44,24 +36,23 @@ const About = () => {
         {/* RIGHT SIDE */}
         <div className={styles.cards}>
           <div className={`${styles.card} reveal delay-1`}>
-            <h3>Full-Stack Development</h3>
+            <h3>Full-Stack & AI Systems</h3>
             <p>
-              Building end-to-end applications using React, Node.js, Express,
-              MongoDB.
+              Building intelligent end-to-end applications using React, FastAPI, Node.js, LangChain, and MongoDB.
             </p>
           </div>
 
           <div className={`${styles.card} reveal delay-2`}>
-            <h3>Machine Learning</h3>
+            <h3>Machine Learning & OCR</h3>
             <p>
-              Experience with ML fundamentals, preprocessing, and model training.
+              Experience training transformer models (LayoutLMv3) and building OCR pipelines (Tesseract.js).
             </p>
           </div>
 
           <div className={`${styles.card} reveal delay-3`}>
             <h3>Problem Solving & DSA</h3>
             <p>
-              Strong grasp of data structures, algorithms, and logical thinking.
+              Strong command over Data Structures, OOP, and DBMS (MySQL/MongoDB). Diamond Certified Smart Coder.
             </p>
           </div>
         </div>

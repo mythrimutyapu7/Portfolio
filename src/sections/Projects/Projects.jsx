@@ -3,6 +3,30 @@ import useReveal from '../../hooks/useReveal';
 
 const projects = [
   {
+    title: 'Enterprise Decision Intelligence Platform',
+    subtitle: 'Multi-Agent Decision Support Platform',
+    description:
+      'A full-stack AI decision intelligence platform using FastAPI, React.js, and multi-agent workflows for incident analysis, document retrieval, and enterprise decision-making.',
+    tech: ['Python', 'FastAPI', 'React.js', 'MongoDB', 'Google Gemini API', 'Railway', 'Vercel'],
+    github: 'https://github.com/mythrimutyapu7/enterprise-decision-platform',
+  },
+  {
+    title: 'AI Interview Trainer Platform',
+    subtitle: 'RAG-Based Mock Interviews',
+    description:
+      'An AI-powered interview preparation platform that uses RAG, LangChain, and OpenAI to generate personalized mock interviews and contextual feedback from resumes and job descriptions.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'OpenAI API', 'LangChain'],
+    github: 'https://github.com/mythrimutyapu7/AI-Interview-Trainer-Platform-',
+  },
+  {
+    title: 'Smart Invoice & Document Analyzer',
+    subtitle: 'OCR & Document AI',
+    description:
+      'A MERN-based document analysis system using OCR and machine learning to extract invoice data, classify expenses, and support intelligent document understanding with LayoutLMv3.',
+    tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tesseract.js', 'pdf-parse', 'LayoutLMv3'],
+    github: 'https://github.com/mythrimutyapu7/smart_invoice_analyzer',
+  },
+  {
     title: 'Voyager',
     subtitle: 'Travel Planning Website',
     description:
@@ -15,7 +39,7 @@ const projects = [
     subtitle: 'Eco-friendly E-commerce Application',
     description:
       'An e-commerce platform focused on sustainable products, featuring product listings, cart functionality, and a smooth shopping experience.',
-    tech: ['React', 'Node.js', 'MongoDB','Express.js','Stripe API'],
+    tech: ['React', 'Firebase', 'MongoDB','Express.js','Stripe API'],
     github: 'https://github.com/mythrimutyapu7/ECommerce',
   },
   {
@@ -104,7 +128,17 @@ const Projects = () => {
 
               </div>
 
-              <p className={styles.description}>{project.description}</p>
+              {Array.isArray(project.description) ? (
+                <ul className={styles.bulletList}>
+                  {project.description.map((bullet, idx) => (
+                    <li key={idx} className={styles.bulletItem}>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.description}>{project.description}</p>
+              )}
 
               {/* TECH STACK */}
               <div className={styles.tech}>

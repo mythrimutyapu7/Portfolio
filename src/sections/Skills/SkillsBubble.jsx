@@ -8,7 +8,8 @@ const innerSkills = [
   'JavaScript',
   'Node.js',
   'MongoDB',
-  'Angular.js',
+  'FastAPI',
+  'LangChain',
   'Machine Learning',
 ];
 
@@ -20,7 +21,9 @@ const outerSkills = [
   'GitHub',
   'DSA',
   'REST APIs',
-  'UI/UX',
+  'Postman',
+  'Claude',
+  'GitHub Copilot',
   'C',
   'C++',
   'Python',

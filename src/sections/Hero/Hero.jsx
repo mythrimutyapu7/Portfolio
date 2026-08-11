@@ -33,8 +33,8 @@ const Hero = () => {
           </h1>
 
           <p className="reveal delay-1">
-            Computer Science undergraduate crafting clean, scalable MERN
-            applications and Machine Learning solutions.
+            Computer Science undergraduate specializing in full-stack development
+            and AI-integrated platforms using LLMs, RAG, and OCR pipelines.
           </p>
 
           <div className={`${styles.buttons} reveal delay-2`}>

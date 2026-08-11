@@ -95,6 +95,10 @@ button:hover {
   transition-delay: 0.3s;
 }
 
+.delay-4 {
+  transition-delay: 0.4s;
+}
+
 .skills {
   background-color: #122c74 !important;
 }

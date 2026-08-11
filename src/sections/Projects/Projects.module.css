@@ -238,3 +238,25 @@
     padding: 24px;
   }
 }
+
+.bulletList {
+  margin-top: 16px;
+  padding-left: 18px;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  list-style-type: disc;
+}
+
+.bulletItem {
+  margin-bottom: 10px;
+}
+
+.bulletItem::marker {
+  color: #60a5fa;
+}
+
+.bulletItem:last-child {
+  margin-bottom: 0;
+}
+
